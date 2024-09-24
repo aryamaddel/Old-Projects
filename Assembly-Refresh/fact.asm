@@ -1,0 +1,28 @@
+DATA SEGMENT
+FACT DB 01H
+NUM DB 05H
+DATA ENDS
+CODE SEGMENT
+    ASSUME CS:CODE,DS:DATA
+START:
+    MOV AX,DATA
+    MOV DS,AX
+    MOV AH,9
+
+    MOV CL, NUM
+
+
+    UP:
+        MOV AL, CL
+        MOV BL, FACT
+        MUL BL
+        MOV FACT, AL
+    DEC CL
+    JNZ UP
+
+
+    MOV DL, FACT
+    MOV AH,02H
+    INT 21H
+CODE ENDS
+END START

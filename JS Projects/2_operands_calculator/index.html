@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="operands">
+            <input type="number" id="operand1" placeholder="Enter number 1">
+            <input type="number" id="operand2" placeholder="Enter number 2">
+        </div>
+        <br />
+        <div class="operations">
+            <button class="addition-btn" onclick="calculate('+')">Add</button>
+            <button class="subtraction-btn" onclick="calculate('-')">
+                Subtract
+            </button>
+            <button class="multiplication-btn" onclick="calculate('*')">
+                Multiply
+            </button>
+            <button class="division-btn" onclick="calculate('/')">Divide</button>
+        </div>
+        <br />
+        <span>
+            Results =
+            <p id="results-el"></p>
+        </span>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
